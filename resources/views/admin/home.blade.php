@@ -4,8 +4,8 @@
 @endpush
 @section('content')
 <div class="row text-center">
-    <img src="/logo.jpg" width="12%">
-    <h1><I>Bengkel Fauzan Motor</h1>
+    <img src="/logo.png" width="12%">
+    <h1><I>SPPD DINAS PENDIDIKAN BARITO KUALA</h1>
 
 </div>
 

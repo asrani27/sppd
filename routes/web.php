@@ -33,9 +33,8 @@ use App\Http\Controllers\SerahTerimaController;
 use App\Http\Controllers\JenisLayananController;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\GantiPasswordController;
-
-Route::get('/', function () {
-});
+use App\Http\Controllers\RincianController;
+use App\Http\Controllers\SPPDController;
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login']);
@@ -61,19 +60,25 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::post('superadmin/jabatan/edit/{id}', [JabatanController::class, 'update']);
     Route::get('superadmin/jabatan/delete/{id}', [JabatanController::class, 'delete']);
 
-    Route::get('superadmin/karyawan', [KaryawanController::class, 'index']);
-    Route::get('superadmin/karyawan/create', [KaryawanController::class, 'create']);
-    Route::post('superadmin/karyawan/create', [KaryawanController::class, 'store']);
-    Route::get('superadmin/karyawan/edit/{id}', [KaryawanController::class, 'edit']);
-    Route::post('superadmin/karyawan/edit/{id}', [KaryawanController::class, 'update']);
-    Route::get('superadmin/karyawan/delete/{id}', [KaryawanController::class, 'delete']);
+    Route::get('superadmin/pegawai', [PegawaiController::class, 'index']);
+    Route::get('superadmin/pegawai/create', [PegawaiController::class, 'create']);
+    Route::post('superadmin/pegawai/create', [PegawaiController::class, 'store']);
+    Route::get('superadmin/pegawai/edit/{id}', [PegawaiController::class, 'edit']);
+    Route::post('superadmin/pegawai/edit/{id}', [PegawaiController::class, 'update']);
+    Route::get('superadmin/pegawai/delete/{id}', [PegawaiController::class, 'delete']);
 
-    Route::get('superadmin/jenisoli', [JenisOliController::class, 'index']);
-    Route::get('superadmin/jenisoli/create', [JenisOliController::class, 'create']);
-    Route::post('superadmin/jenisoli/create', [JenisOliController::class, 'store']);
-    Route::get('superadmin/jenisoli/edit/{id}', [JenisOliController::class, 'edit']);
-    Route::post('superadmin/jenisoli/edit/{id}', [JenisOliController::class, 'update']);
-    Route::get('superadmin/jenisoli/delete/{id}', [JenisOliController::class, 'delete']);
+    Route::get('superadmin/sppd', [SPPDController::class, 'index']);
+    Route::get('superadmin/sppd/create', [SPPDController::class, 'create']);
+    Route::post('superadmin/sppd/create', [SPPDController::class, 'store']);
+    Route::get('superadmin/sppd/edit/{id}', [SPPDController::class, 'edit']);
+    Route::get('superadmin/sppd/pengikut/{id}', [SPPDController::class, 'pengikut']);
+    Route::post('superadmin/sppd/pengikut/{id}', [SPPDController::class, 'simpanPengikut']);
+    Route::get('superadmin/sppd/deletepengikut/{id}', [SPPDController::class, 'deletePengikut']);
+    Route::post('superadmin/sppd/edit/{id}', [SPPDController::class, 'update']);
+    Route::get('superadmin/sppd/delete/{id}', [SPPDController::class, 'delete']);
+    Route::get('superadmin/rincian', [RincianController::class, 'index']);
+    Route::get('superadmin/rincian/edit/{id}', [RincianController::class, 'edit']);
+    Route::post('superadmin/rincian/edit/{id}', [RincianController::class, 'update']);
 
     Route::get('superadmin/merkoli', [MerkOliController::class, 'index']);
     Route::get('superadmin/merkoli/create', [MerkOliController::class, 'create']);

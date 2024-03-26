@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>BENGKEL FAUZAN MOTOR</title>
+  <title>SPPD</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -33,14 +33,14 @@
   <script src="/notif/dist/js/iziToast.min.js" type="text/javascript"></script>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-purple layout-top-nav" style="background-image: url('/bg.png')">
+<body class="hold-transition skin-purple layout-top-nav">
 <div class="wrapper">
 
   <header class="main-header">
     
   </header>
   <!-- Full Width Column -->
-  <div class="content-wrapper"  style="background-image: url('/bg.png'); background-size:cover">
+  <div class="content-wrapper"  style="background-image: url('/bg.jpg'); background-size:cover">
     <div class="container">
       <!-- Content Header (Page header) -->
       <section class="content-header">
@@ -60,44 +60,44 @@
         <div class="row">
           <div class="col-md-3">
           </div>
-          <div class="col-md-4">
+          <div class="col-md-6">
             <div class="text-center">
+              <img src="/logo.png" width="30%;">
             </div>
             
           <br/><br/>
-          <br/><br/>
-          <br/><br/>
-          <br/><br/>
+          
             <div class="box" style="box-shadow: 0 8px 8px 0 rgba(0,0,0,.2);border-radius:30px">
               <div class="box-header text-center">
-                <h3><strong>BENGKEL FAUZAN MOTOR</strong></h3>
+                <h3><strong>DINAS PENDIDIKAN BARITO KUALA</strong></h3>
               </div>
-              <form role="form" method="post" action="/login" autocomplete="off">
+              <form class="form-horizontal" method="post" action="/login" autocomplete="off">
                 @csrf
-              <div class="box-body" style="padding:30px">
-                <div class="form-group has-feedback">
-                  <label>Username</label>
-                  <input type="text" name="username" class="form-control" placeholder="user">
-                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+
+                <div class="box-body" style="padding:30px">
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Username</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" placeholder="username" name="username" style="border-radius: 20px">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" placeholder="Password" name="password" style="border-radius: 20px">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label"></label>
+                    <div class="col-sm-10">
+                      <button type="submit" class="btn bg-navy btn-block pull-right"  style="border-radius: 20px"><i class="fa fa-sign-in"></i> MASUK</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="form-group has-feedback">
-                  <label>Password</label>
-                  <input type="password" name="password" class="form-control" placeholder="key">
-                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                  <button type="submit" class="btn btn-warning btn-flat btn-block pull-right"><i class="fa fa-sign-in"></i> LOGIN</button>
-                </div>
-                <br/>
-                <br/>
-                <br/>
-                <div>
-                </div>
-              </div>
               </form>
             </div>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-3">
           </div>
         </div>
         

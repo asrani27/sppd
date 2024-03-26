@@ -13,55 +13,50 @@
             <!-- /.box-header -->
             <!-- form start -->
             
-            <form class="form-horizontal" action="/superadmin/penjualan/edit/{{$data->id}}" method="post">
+            <form class="form-horizontal" action="/superadmin/rincian/edit/{{$data->id}}" method="post">
                 @csrf
                 <div class="box-body">
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Nama Pembeli</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">NIP</label>
                     <div class="col-sm-10">
-                      <input type="text" name="nama" class="form-control" value="{{$data->nama}}" required>
+                      <input type="text" class="form-control" readonly value="{{$data->nip}}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Alamat</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Nama</label>
                     <div class="col-sm-10">
-                      <input type="text" name="alamat" class="form-control" value="{{$data->alamat}}" required>
+                      <input type="text" class="form-control" readonly value="{{$data->nama}}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Telp</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Jabatan</label>
                     <div class="col-sm-10">
-                      <input type="text" name="telp" class="form-control" value="{{$data->telp}}" required>
+                      <input type="text" class="form-control" readonly value="{{$data->jabatan}}">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Jenis Mobil</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Uang Transport</label>
                     <div class="col-sm-10">
-                      <input type="text" name="jenis_mobil" class="form-control" value="{{$data->jenis_mobil}}" required>
+                      <input type="text" name="uang_transport" class="form-control" required value="{{$data->uang_transport}}" onkeypress="return hanyaAngka(event)">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Nopol</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Uang Penginapan</label>
                     <div class="col-sm-10">
-                      <input type="text" name="nopol" class="form-control" value="{{$data->nopol}}" required>
+                      <input type="text" name="uang_penginapan" class="form-control" required value="{{$data->uang_penginapan}}" onkeypress="return hanyaAngka(event)">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Karyawan</label>
+                    <label for="inputEmail3" class="col-sm-2 control-label">Uang Harian</label>
                     <div class="col-sm-10">
-                      <select class="form-control" name="karyawan_id" required>
-                        <option value="">-pilih-</option>
-                        @foreach ($karyawan as $item)   
-                        <option value="{{$item->id}}" {{$data->karyawan_id == $item->id ? 'selected':''}}>{{$item->nama}}</option>
-                        @endforeach
-                      </select>
+                      <input type="text" name="uang_harian" class="form-control" required value="{{$data->uang_harian}}" onkeypress="return hanyaAngka(event)">
                     </div>
                   </div>
                   <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label"></label>
                     <div class="col-sm-10">
                       <button type="submit" class="btn btn-danger btn-block"><i class="fa fa-save"></i> Update</button>
-                      <a href="/superadmin/penjualan" class="btn bg-gray btn-block"><i class="fa fa-arrow-left"></i> Kembali</a>
+                      <a href="/superadmin/rincian" class="btn bg-gray btn-block"><i class="fa fa-arrow-left"></i> Kembali</a>
                     </div>
                   </div>
               </div>

@@ -10,13 +10,12 @@
     
     
     <li class="{{ (request()->is('superadmin/jabatan*')) ? 'active' : '' }}"><a href="/superadmin/jabatan"><i class="fa fa-arrow-right"></i> <span><i>Jabatan</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/karyawan*')) ? 'active' : '' }}"><a href="/superadmin/karyawan"><i class="fa fa-arrow-right"></i> <span><i>Karyawan</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/jenisoli*')) ? 'active' : '' }}"><a href="/superadmin/jenisoli"><i class="fa fa-arrow-right"></i> <span><i>Jenis Oli</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/merkoli*')) ? 'active' : '' }}"><a href="/superadmin/merkoli"><i class="fa fa-arrow-right"></i> <span><i>Merk Oli</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/sparepart*')) ? 'active' : '' }}"><a href="/superadmin/sparepart"><i class="fa fa-arrow-right"></i> <span><i>Sparepart</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/jenislayanan*')) ? 'active' : '' }}"><a href="/superadmin/jenislayanan"><i class="fa fa-arrow-right"></i> <span><i>Jenis Layanan</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/penjualan*')) ? 'active' : '' }}"><a href="/superadmin/penjualan"><i class="fa fa-arrow-right"></i> <span><i>Transaksi Penjualan</i></span></a></li>
-    <li class="{{ (request()->is('superadmin/perhitungan*')) ? 'active' : '' }}"><a href="/superadmin/perhitungan"><i class="fa fa-arrow-right"></i> <span><i>Perhitungan</i></span></a></li>
+    <li class="{{ (request()->is('superadmin/pegawai*')) ? 'active' : '' }}"><a href="/superadmin/pegawai"><i class="fa fa-arrow-right"></i> <span><i>Pegawai</i></span></a></li>
+    <li class="header">TRANSAKSI</li>
+    <li class="{{ (request()->is('superadmin/sppd*')) ? 'active' : '' }}"><a href="/superadmin/sppd"><i class="fa fa-arrow-right"></i> <span><i>SPPD</i></span></a></li>
+    <li class="{{ (request()->is('superadmin/rincian*')) ? 'active' : '' }}"><a href="/superadmin/rincian"><i class="fa fa-arrow-right"></i> <span><i>Rincian SPPD</i></span></a></li>
+    <li class="{{ (request()->is('superadmin/pembayaran*')) ? 'active' : '' }}"><a href="/superadmin/pembayaran"><i class="fa fa-arrow-right"></i> <span><i>Pembayaran SPPD</i></span></a></li>
+    <li class="header">LAPORAN</li>
     <li class="{{ (request()->is('superadmin/laporan*')) ? 'active' : '' }}"><a href="/superadmin/laporan"><i class="fa fa-arrow-right"></i> <span><i>Laporan</i></span></a></li>
     <li class="header">SETTING</li>
     
