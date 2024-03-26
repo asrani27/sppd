@@ -11,7 +11,7 @@
               <h3 class="box-title"><i class="fa fa-clipboard"></i> Data Pegawai</h3>
     
               <div class="box-tools">
-                <a href="/superadmin/pegawai/create" class="btn btn-sm btn-danger "><i class="fa fa-plus-circle"></i> Tambah</a>
+                <a href="/superadmin/pegawai/create" class="btn btn-sm btn-danger"><i class="fa fa-plus-circle"></i> Tambah</a>
               </div>
             </div>
             <!-- /.box-header -->

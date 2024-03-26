@@ -2,32 +2,32 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\SPPD;
 use App\Models\Pengikut;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
-class RincianController extends Controller
+class PembayaranController extends Controller
 {
     public function index()
     {
         $data = Pengikut::orderBy('id', 'DESC')->paginate(15);
-        return view('admin.rincian.index', compact('data'));
+        return view('admin.pembayaran.index', compact('data'));
     }
     public function edit($id)
     {
         $data = Pengikut::find($id);
-        return view('admin.rincian.edit', compact('data'));
+        return view('admin.pembayaran.edit', compact('data'));
     }
     public function update(Request $req, $id)
     {
         $data = Pengikut::find($id)->update([
-
-            'uang_transport' => $req->uang_transport,
-            'uang_penginapan' => $req->uang_penginapan,
-            'uang_harian' => $req->uang_harian,
+            'nomor_bukti' => $req->nomor_bukti,
+            'tanggal_bayar' => $req->tanggal_bayar,
+            'nip_bendahara' => $req->nip_bendahara,
+            'nama_bendahara' => $req->nama_bendahara,
+            'transfer_ke' => $req->transfer_ke,
         ]);
         Session::flash('success', 'Berhasil');
-        return redirect('/superadmin/rincian');
+        return redirect('/superadmin/pembayaran');
     }
 }

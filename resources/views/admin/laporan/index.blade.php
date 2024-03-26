@@ -16,11 +16,9 @@
           </div>
           <!-- /.box-header -->
           <div class="box-body table-responsive">
-            <a href="/superadmin/laporan/karyawan" target="_blank" class="btn btn-sm btn-warning">LAP. KARYAWAN</a>
-            <a href="/superadmin/laporan/jenisoli" target="_blank" class="btn btn-sm btn-warning">LAP. JENIS OLI</a>
-            <a href="/superadmin/laporan/merkoli" target="_blank" class="btn btn-sm btn-warning">LAP. MERK OLI</a>
-            <a href="/superadmin/laporan/jenislayanan" target="_blank" class="btn btn-sm btn-warning">LAP. JENIS LAYANAN</a>
-            <a href="/superadmin/laporan/jabatan" target="_blank" class="btn btn-sm btn-warning">LAP. JABATAN</a>
+            <a href="/superadmin/laporan/pegawai" target="_blank" class="btn btn-sm btn-danger">LAP. PEGAWAI/PEMOHON</a>
+            <a href="/superadmin/laporan/jabatan" target="_blank" class="btn btn-sm btn-danger">LAP. JABATAN</a>
+            <a href="/superadmin/laporan/bulanan" target="_blank" class="btn btn-sm btn-danger">LAP. PENGELUARAN SPPD</a>
           </div>
           <!-- /.box-body -->
         </div>
@@ -50,13 +48,13 @@
           Laporan
           <select name="jenis" required>
             <option value="">-pilih-</option>
-            <option value="penjualan">transaksi service & penjualan</option>
+            <option value="keuangan">Keuangan SPPD Pegawai</option>
             
           </select>
           &nbsp;
           &nbsp;
           &nbsp;
-          <button type="submit" class="btn btn-xs btn-warning">Print</button>
+          <button type="submit" class="btn btn-xs btn-danger">Print</button>
         </form>
         </div>
         <!-- /.box-body -->

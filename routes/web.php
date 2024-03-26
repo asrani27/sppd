@@ -33,6 +33,7 @@ use App\Http\Controllers\SerahTerimaController;
 use App\Http\Controllers\JenisLayananController;
 use App\Http\Controllers\LupaPasswordController;
 use App\Http\Controllers\GantiPasswordController;
+use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\RincianController;
 use App\Http\Controllers\SPPDController;
 
@@ -80,55 +81,13 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/rincian/edit/{id}', [RincianController::class, 'edit']);
     Route::post('superadmin/rincian/edit/{id}', [RincianController::class, 'update']);
 
-    Route::get('superadmin/merkoli', [MerkOliController::class, 'index']);
-    Route::get('superadmin/merkoli/create', [MerkOliController::class, 'create']);
-    Route::post('superadmin/merkoli/create', [MerkOliController::class, 'store']);
-    Route::get('superadmin/merkoli/edit/{id}', [MerkOliController::class, 'edit']);
-    Route::post('superadmin/merkoli/edit/{id}', [MerkOliController::class, 'update']);
-    Route::get('superadmin/merkoli/delete/{id}', [MerkOliController::class, 'delete']);
-
-    Route::get('superadmin/sparepart', [SparepartController::class, 'index']);
-    Route::get('superadmin/sparepart/create', [SparepartController::class, 'create']);
-    Route::post('superadmin/sparepart/create', [SparepartController::class, 'store']);
-    Route::get('superadmin/sparepart/edit/{id}', [SparepartController::class, 'edit']);
-    Route::post('superadmin/sparepart/edit/{id}', [SparepartController::class, 'update']);
-    Route::get('superadmin/sparepart/delete/{id}', [SparepartController::class, 'delete']);
-
-    Route::get('superadmin/jenislayanan', [JenisLayananController::class, 'index']);
-    Route::get('superadmin/jenislayanan/create', [JenisLayananController::class, 'create']);
-    Route::post('superadmin/jenislayanan/create', [JenisLayananController::class, 'store']);
-    Route::get('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'edit']);
-    Route::post('superadmin/jenislayanan/edit/{id}', [JenisLayananController::class, 'update']);
-    Route::get('superadmin/jenislayanan/delete/{id}', [JenisLayananController::class, 'delete']);
-
-    Route::get('superadmin/penjualan', [PenjualanController::class, 'index']);
-    Route::get('superadmin/penjualan/create', [PenjualanController::class, 'create']);
-    Route::post('superadmin/penjualan/create', [PenjualanController::class, 'store']);
-    Route::get('superadmin/penjualan/edit/{id}', [PenjualanController::class, 'edit']);
-    Route::get('superadmin/penjualan/transaksi/{id}', [PenjualanController::class, 'transaksi']);
-    Route::get('superadmin/penjualan/kwitansi/{id}', [LaporanController::class, 'kuitansi']);
-    Route::post('superadmin/penjualan/transaksi/{id}', [PenjualanController::class, 'transaksiStore']);
-    Route::post('superadmin/penjualan/edit/{id}', [PenjualanController::class, 'update']);
-    Route::get('superadmin/penjualan/delete/{id}', [PenjualanController::class, 'delete']);
-    Route::get('superadmin/penjualan/deletetransaksi/{id}', [PenjualanController::class, 'transaksiDelete']);
-
-    Route::get('superadmin/perhitungan', [PerhitunganController::class, 'index']);
-    Route::get('superadmin/perhitungan/datalatih/create', [PerhitunganController::class, 'createDataLatih']);
-    Route::get('superadmin/perhitungan/datauji/create', [PerhitunganController::class, 'createDataUji']);
-    Route::get('superadmin/perhitungan/datalatih/edit/{id}', [PerhitunganController::class, 'editDataLatih']);
-    Route::post('superadmin/perhitungan/datalatih/edit/{id}', [PerhitunganController::class, 'updateDataLatih']);
-    Route::get('superadmin/perhitungan/datauji/edit/{id}', [PerhitunganController::class, 'editDataUji']);
-    Route::post('superadmin/perhitungan/datauji/edit/{id}', [PerhitunganController::class, 'updateDataUji']);
-    Route::get('superadmin/perhitungan/datauji/delete/{id}', [PerhitunganController::class, 'deleteDataUji']);
-    Route::get('superadmin/perhitungan/datalatih/delete/{id}', [PerhitunganController::class, 'deleteDataLatih']);
-    Route::post('superadmin/perhitungan/datalatih/create', [PerhitunganController::class, 'storeDataLatih']);
-    Route::post('superadmin/perhitungan/datauji/create', [PerhitunganController::class, 'storeDataUji']);
+    Route::get('superadmin/pembayaran', [PembayaranController::class, 'index']);
+    Route::get('superadmin/pembayaran/edit/{id}', [PembayaranController::class, 'edit']);
+    Route::post('superadmin/pembayaran/edit/{id}', [PembayaranController::class, 'update']);
 
     Route::get('superadmin/laporan', [LaporanController::class, 'index']);
-    Route::get('superadmin/laporan/karyawan', [LaporanController::class, 'karyawan']);
-    Route::get('superadmin/laporan/jenisoli', [LaporanController::class, 'jenisoli']);
-    Route::get('superadmin/laporan/merkoli', [LaporanController::class, 'merkoli']);
-    Route::get('superadmin/laporan/jenislayanan', [LaporanController::class, 'jenislayanan']);
+    Route::get('superadmin/laporan/pegawai', [LaporanController::class, 'pegawai']);
+    Route::get('superadmin/laporan/bulanan', [LaporanController::class, 'bulanan']);
     Route::get('superadmin/laporan/jabatan', [LaporanController::class, 'jabatan']);
     Route::post('superadmin/laporan/periode', [LaporanController::class, 'periode']);
 });

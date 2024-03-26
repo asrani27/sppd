@@ -42,6 +42,7 @@
                     <td>{{number_format($item->uang_harian + $item->uang_transport + $item->uang_penginapan)}}</td>
                     
                     <td>
+                      <a href="/superadmin/rincian/print/{{$item->id}}" class="btn btn-xs  btn-danger"><i class="fa fa-print"></i> Cetak</a>
                       <a href="/superadmin/rincian/edit/{{$item->id}}" class="btn btn-xs  btn-primary"><i class="fa fa-money"></i> Rincian</a>
                     </td>
                 </tr>

@@ -10,11 +10,10 @@
     <table border=0 width="100%">
         <tr>
             <td width="15%" style="text-align: right">
-                <img src="/logo.jpg" width="50%">
+                <img src="/logo.png" width="50%">
             </td>
             <td style="text-align: center">
-                <b>BENGKEL FAUZAN MOTOR<br/></b>
-                Alamat: Jl. Ir. P.H.M. Noor, Mabuun RT 07 Rw 03, Kec. Murung Pudak, Kab. Tabalong, Kalimantan Selatan.
+                <b>DINAS PENDIDIKAN BARITO KUALA<br/></b>
                 
 
             </td>
@@ -48,13 +47,14 @@
         <tr>
             <td width="60%"></td>
             <td>
-                Tabalong, {{\Carbon\Carbon::today()->translatedFormat('d F Y')}}, <br/>
+                Barito Kuala, {{\Carbon\Carbon::today()->translatedFormat('d F Y')}}, <br/>
                 
                 Pimpinan,
                 <br/><br/><br/><br/><br/>
 
 
-                <b><u>Fauzan</u></b><br/>
+                <b><u>Sukawati</u></b><br/>
+                NIP: 123454323243533
                 
 
             </td>
