@@ -70,7 +70,8 @@ class SPPDController extends Controller
     }
     public function delete($id)
     {
-        $data = SPPD::find($id)->delete();
+        SPPD::find($id)->pengikut->map->delete();
+        SPPD::find($id)->delete();
         Session::flash('success', 'Berhasil');
         return redirect('/superadmin/sppd');
     }
