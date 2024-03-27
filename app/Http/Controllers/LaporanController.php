@@ -49,7 +49,7 @@ class LaporanController extends Controller
 
     public function bulanan()
     {
-        $data = Pengikut::select(
+        $data = Pengikut::where('tanggal_bayar', '!=', null)->select(
             DB::raw("(sum(uang_transport)) as uang_transport"),
             DB::raw("(sum(uang_penginapan)) as uang_penginapan"),
             DB::raw("(sum(uang_harian)) as uang_harian"),
