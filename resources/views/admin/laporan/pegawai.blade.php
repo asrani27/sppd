@@ -31,6 +31,7 @@
             <th>No</th>
             <th>NIP</th>
             <th>Nama</th>
+            <th>Alamat</th>
             <th>Jabatan</th>
             <th>Golongan</th>
             <th>Tingkat</th>
@@ -43,6 +44,7 @@
                 <td style="text-align: center">{{$no++}}</td>
                 <td style="text-align: center">{{$item->nip}}</td>
                 <td style="text-align: center">{{$item->nama}}</td>
+                <td style="text-align: center">{{$item->alamat}}</td>
                 <td style="text-align: center">{{$item->jabatan->nama}}</td>
                 <td style="text-align: center">{{$item->golongan}}</td>
                 <td style="text-align: center">{{$item->tingkat}}</td>

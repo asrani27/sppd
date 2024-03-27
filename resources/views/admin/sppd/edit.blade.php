@@ -41,6 +41,12 @@
                     </div>
                   </div>
                   <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">NIP Pejabat Pembuat Komitmen</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="nip_pejabat" class="form-control" required value="{{$data->nip_pejabat}}">
+                    </div>
+                  </div>
+                  <div class="form-group">
                     <label for="inputEmail3" class="col-sm-2 control-label">Maksud</label>
                     <div class="col-sm-10">
                       <input type="text" name="maksud" class="form-control" required value="{{$data->maksud}}">

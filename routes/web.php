@@ -80,8 +80,10 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('superadmin/rincian', [RincianController::class, 'index']);
     Route::get('superadmin/rincian/edit/{id}', [RincianController::class, 'edit']);
     Route::post('superadmin/rincian/edit/{id}', [RincianController::class, 'update']);
+    Route::get('superadmin/rincian/print/{id}', [RincianController::class, 'print']);
 
     Route::get('superadmin/pembayaran', [PembayaranController::class, 'index']);
+    Route::get('superadmin/pembayaran/print/{id}', [PembayaranController::class, 'print']);
     Route::get('superadmin/pembayaran/edit/{id}', [PembayaranController::class, 'edit']);
     Route::post('superadmin/pembayaran/edit/{id}', [PembayaranController::class, 'update']);
 

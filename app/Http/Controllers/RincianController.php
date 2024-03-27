@@ -30,4 +30,10 @@ class RincianController extends Controller
         Session::flash('success', 'Berhasil');
         return redirect('/superadmin/rincian');
     }
+
+    public function print($id)
+    {
+        $data = Pengikut::find($id);
+        return view('admin.rincian.print', compact('data'));
+    }
 }

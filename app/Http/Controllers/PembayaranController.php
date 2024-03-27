@@ -13,6 +13,12 @@ class PembayaranController extends Controller
         $data = Pengikut::orderBy('id', 'DESC')->paginate(15);
         return view('admin.pembayaran.index', compact('data'));
     }
+
+    public function print($id)
+    {
+        $data = Pengikut::find($id);
+        return view('admin.pembayaran.print', compact('data'));
+    }
     public function edit($id)
     {
         $data = Pengikut::find($id);

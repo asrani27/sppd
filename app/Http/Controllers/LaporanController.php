@@ -53,8 +53,8 @@ class LaporanController extends Controller
             DB::raw("(sum(uang_transport)) as uang_transport"),
             DB::raw("(sum(uang_penginapan)) as uang_penginapan"),
             DB::raw("(sum(uang_harian)) as uang_harian"),
-            DB::raw("(DATE_FORMAT(created_at, '%m-%Y')) as month_year"),
-        )->groupBy(DB::raw("DATE_FORMAT(created_at, '%m-%Y')"))->get()->map(function ($item) {
+            DB::raw("(DATE_FORMAT(tanggal_bayar, '%m-%Y')) as month_year"),
+        )->groupBy(DB::raw("DATE_FORMAT(tanggal_bayar, '%m-%Y')"))->get()->map(function ($item) {
             $item->bulan = Carbon::createFromFormat('m-Y', $item->month_year)->format('M');
             $item->tahun = Carbon::createFromFormat('m-Y', $item->month_year)->format('Y');
             $item->total = $item->uang_transport + $item->uang_penginapan + $item->uang_harian;
